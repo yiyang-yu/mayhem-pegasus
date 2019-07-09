@@ -56,7 +56,6 @@ RUN chmod a+rwx /etc/bash.bashrc &&\
         dask && \
     /opt/conda/bin/conda install -y -c pytorch pytorch torchvision cudatoolkit=10.0 magma-cuda100 ignite && \
     /opt/conda/bin/conda install -y -c conda-forge ninja jedi jupyterlab tensorboardx pyarrow fastparquet && \
-    /opt/conda/bin/conda install -y cudatoolkit cudnn jedi jupyterlab && \
     /opt/conda/bin/pip install tf-nightly-gpu-2.0-preview tfp-nightly tb-nightly && \
     /opt/conda/bin/pip install hyperopt pydot && \
     /opt/conda/bin/conda clean -ya && \
