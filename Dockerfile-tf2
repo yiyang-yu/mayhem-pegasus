@@ -23,7 +23,8 @@ RUN chmod a+rwx /etc/bash.bashrc &&\
          vim \
          ca-certificates \
          libjpeg-dev \
-         libpng-dev &&\
+         libpng-dev \
+         graphviz &&\
      rm -rf /var/lib/apt/lists/* && \
      curl -o ~/miniconda.sh -O  https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh  && \
      chmod +x ~/miniconda.sh && \
@@ -52,12 +53,12 @@ RUN chmod a+rwx /etc/bash.bashrc &&\
         mkl-include \
         cython \
         typing \
-        dask  && \
+        dask && \
     /opt/conda/bin/conda install -y -c pytorch pytorch torchvision cudatoolkit=10.0 magma-cuda100 ignite && \
     /opt/conda/bin/conda install -y -c conda-forge ninja jedi jupyterlab tensorboardx pyarrow fastparquet && \
     /opt/conda/bin/conda install -y cudatoolkit cudnn jedi jupyterlab && \
     /opt/conda/bin/pip install tf-nightly-gpu-2.0-preview tfp-nightly tb-nightly && \
-    /opt/conda/bin/pip install hyperopt && \
+    /opt/conda/bin/pip install hyperopt pydot && \
     /opt/conda/bin/conda clean -ya && \
     mkdir /.local && chmod a+rwx /.local && mkdir /.jupyter && chmod a+rwx /.jupyter
 
