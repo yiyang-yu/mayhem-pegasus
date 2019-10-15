@@ -29,7 +29,7 @@ docker run -u $(id -u):$(id -g)  -v $PWD/mnt:/io -p 0.0.0.0:<local jupyter port>
 where `<device>` is the device number. If you want to use multiple devices, see usage [examples](https://github.com/NVIDIA/nvidia-docker#usage).
 
 #### examples:
-`--gpus 1` to use only first GPU
+`--gpus 1` to use only first one GPU
 
 `--gpus '"device=1,2"'` to use devices 1 and 2
 
@@ -51,3 +51,12 @@ The provider docker file / container suppose NVidia GPU usage. You need to insta
 Autocompletion in Jupyter might be veeeery slow or inactive. This might be cause by issues with `jedi` (see many issues in jupyter repo on this matter). To deactivate `jedi` and get autocompletion in the notebooks, you can run the following magic:
 
 ```%config Completer.use_jedi = False```
+
+
+## Other useful docker commands
+
+*  to get a bash shell in the container
+
+```
+docker exec -it <container name> /bin/bash
+```
