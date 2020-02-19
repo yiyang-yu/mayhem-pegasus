@@ -21,6 +21,7 @@ RUN chmod a+rwx /etc/bash.bashrc &&\
          unzip \
          git \
          vim \
+         wget \
          ca-certificates \
          libjpeg-dev \
          libpng-dev \
