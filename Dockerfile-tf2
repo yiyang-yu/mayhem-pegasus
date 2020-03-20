@@ -58,7 +58,7 @@ RUN chmod a+rwx /etc/bash.bashrc &&\
     /opt/conda/bin/conda install -y -c pytorch pytorch torchvision cudatoolkit=10.0 magma-cuda100 ignite && \
     /opt/conda/bin/conda install -y -c conda-forge ninja jedi jupyterlab tensorboardx pyarrow fastparquet && \
     /opt/conda/bin/pip install tensorflow-gpu==2.0.0 tensorflow-probability==0.8.0 tensorboard==2.0.0 && \
-    /opt/conda/bin/pip install hyperopt pydot fairseq && \
+    /opt/conda/bin/pip install hyperopt pydot fairseq lmdb && \
     /opt/conda/bin/conda clean -ya && \
     mkdir /.local && chmod a+rwx /.local && mkdir /.jupyter && chmod a+rwx /.jupyter
 
